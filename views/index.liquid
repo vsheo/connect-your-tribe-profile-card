@@ -3,19 +3,27 @@
 {% render 'partials/head.liquid' %}
 
 <main>
+	<input type="checkbox" id="button-visite" name="active" value="1">
+	<input type="checkbox" id="button-Mediahuis" name="active" value="2">
+	<input type="checkbox" id="button-Accessdash" name="active" value="3">
+	<input type="checkbox" id="button-ilw" name="active" value="4">
+
 	<section class="kaartje">
     	<h1>{{ person.name }}</h1>
     	<img class="img-profile" src="assets/profile-picture.png" alt="Profile picture">
 		<p>Ik ben Viresh bekijk mijn vooruitgang door mijn projecten in de websites hieronder</p>
 		<ul class="ul-buttons">
-			<li><button>Visitekaartje sprint 1</button></li>
-			<li><button>Mediahuis</button></li>
-			<li><button>Accessdash</button></li>
-			<li><button>I Love Web</button></li>
+			<li><label for="button-visite">Visitekaartje sprint 1</label></li>
+			<li><label for="button-Mediahuis">Mediahuis</label></li>
+			<li><label for="button-Accessdash">Accessdash</label></li>
+			<li><label for="button-ilw">I Love Web</label></li>
 		</ul>
 	</section>
 	<section class="visitekaartje slide-info">
-
+		<p class="visite-info">In sprint 1 heb ik ook een visitekaartje ontworpen. Dit was de eerste website die ik voor deze opleiding heb gemaakt. Je kunt het visitekaartje <a href="">hier</a> bekijken.</p>
+		<p class="visite-Mediahuis">Bij het begin van sprint 2 kreeg ik de opdracht van een opdrachtgever om een overzichtspagina te maken van de sites van Veronica, Slam, 100%.nl en Sublime. <a href="">Zo</a> heb ik het aangepakt.</p>
+		<p class="visite-Accessdash">In Sprint 6 kreeg ik de kans om alles wat ik in de voorgaande sprints heb geleerd te laten zien. De opdracht was om een website, genaamd AccessDah, te maken op basis van een Figma-prototype. <a href="">Dit</a> is het eindresultaat.</p>
+		<p class="visite-ilw">Bekijk mijn I Love Web, <a href="">hier</a> maak ik samenvattingen, leg ik code uit en houd ik mijn vooruitgang bij.</p>
 	</section>
 </main>
 

@@ -55,3 +55,13 @@ function whichButton(clickedButton) {
 	});
 }
 
+
+
+// uncheck a checkbox when a new one is checked
+document.querySelectorAll("input").forEach(checkbox => {
+	checkbox.addEventListener("change", function () {
+		document.querySelectorAll("input").forEach(other => {
+			if (other !== this) other.checked = false; // Uncheck all others
+		});
+	});
+});

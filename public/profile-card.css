@@ -16,7 +16,102 @@ main {
 	align-items: center;
 	justify-content: center;
 	height: 100dvh;
+
+	input {
+		position: absolute;
+		left: 5em;
+		top: 1em;
+		
+		&[value="1"] {
+			margin-left: 1em;
+		}
+
+		&[value="2"] {
+			margin-left: 2em;
+		}
+
+		&[value="3"] {
+			margin-left: 3em;
+		}
+
+		&[value="4"] {
+			margin-left: 4em;
+		}
+	}
+
+	/* visitekaartje button */
+	&:has([value="1"]:checked) {
+		.slide-info {
+			transform: translate(0, 3em);
+			transition: 1s ease-in-out;
+		}
+
+		.kaartje {
+			transform: translate(0, -3em);
+			transition: 1s ease-in-out;
+		}
+
+		.visite-info {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	/* mediahuis button */
+	&:has([value="2"]:checked) {
+		.slide-info {
+			transform: translate(-7em, 0);
+			transition: 1s ease-in-out;
+		}
+		
+		.kaartje {
+			transform: translate(7em, 0);
+			transition: 1s ease-in-out;
+		}
+
+		.visite-Mediahuis {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	/* accessdash button */
+	&:has([value="3"]:checked) {
+		.slide-info {
+			transform: translate(7em, 0);
+			transition: 1s ease-in-out;
+		}
+
+		.kaartje {
+			transform: translate(-7em, 0);
+			transition: 1s ease-in-out;
+		}
+
+		.visite-Accessdash {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	/* ilw button */
+	&:has([value="4"]:checked) {
+		.slide-info {
+			transform: translate(0, -3em);
+			transition: 1s ease-in-out;
+		}
+		
+		.kaartje {
+			transform: translate(0, 3em);
+			transition: 1s ease-in-out;
+		}
+
+		.visite-ilw {
+			display: block;
+			opacity: 1;
+		}
+	}
 }
+
 
 .kaartje {
 	display: grid;
@@ -53,7 +148,6 @@ main {
 		grid-area: text;
         margin-bottom: 0.5em;
 		padding: 0 clamp(1rem, 5vw, 2rem);
-
 	}
 
 	.ul-buttons {
@@ -68,10 +162,7 @@ main {
 			list-style: none;
 			margin: 0.5em 0;
 
-			button {
-				background-color: inherit;
-				border: none;
-
+			label {
 				&:hover {
 					color: brown;
 					transform: scale(1.2);
@@ -81,30 +172,16 @@ main {
 			}
 		}
 	}
-
-	&.active-visite {
-		transition: 1s ease-in-out;
-		transform: translate(0, 5em);
-	}
-
-	&.active-Mediahuis {
-		transition: 1s ease-in-out;
-		transform: translate(-5em, 0);
-	}
-
-	&.active-Accessdash {
-		transition: 1s ease-in-out;
-		transform: translate(5em, 0);
-	}
-
-	&.active-ILW {
-		transition: 1s ease-in-out;
-		transform: translate(0, -5em);
-	}
 }
 
 
 .slide-info {
+	display: grid;
+	grid-template-areas:
+	    ". top ."
+		"left . right"
+		". bot ."
+		;
 	background-color: lightgray;
 	position: fixed;
 	height: 23em;
@@ -113,24 +190,74 @@ main {
 	z-index: 10;
 	transition: 1s ease-in-out;
 
-
-	&.active-visite {
-		transition: 1s ease-in-out;
-		transform: translate(0, -5em);
+	.visite-info {
+		grid-area: bot;
+		align-content: end;
+		padding-bottom: 0.5em;
+		display: none;
 	}
 
-	&.active-Mediahuis {
-		transition: 1s ease-in-out;
-		transform: translate(5em, 0);
+	.visite-Mediahuis {
+		grid-area: left;
+		margin-left: 0.5em;
+		width: 13em;
+		display: none;
 	}
 
-	&.active-Accessdash {
-		transition: 1s ease-in-out;
-		transform: translate(-5em, 0);
+	.visite-Accessdash {
+		grid-area: right;
+		justify-self: end;
+		margin-right: 0.5em;
+		width: 13em;
+		display: none;
 	}
 
-	&.active-ILW {
-		transition: 1s ease-in-out;
-		transform: translate(0, 5em);
+	.visite-ilw {
+		grid-area: top;
+		margin-top: 1em;
+		margin-left: 3em;
+		margin-right: 3em;
+		display: none;
+	}
+}
+
+
+@keyframes slide-info-down {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(0, 8em);
+	}
+}
+
+@keyframes slide-info-left {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-8em, 0);
+	}
+}
+
+@keyframes slide-info-right {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(8em, 0);
+	}
+}
+
+@keyframes slide-info-up {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(0, -8em);
 	}
 }
