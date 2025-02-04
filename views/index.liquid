@@ -1,73 +1,25 @@
 {% render 'partials/head.liquid' %}
 
-    <article class="card">
-        <div class="card_front">
-          <header>
-            <!-- profile picture and flip -->
-            <div class="flip-picture">
-              <!-- maakt de foto 3d zodat het geflipped kan worden(niet gespiegeld) -->
-              <div class="flip-picture-inner">
-                <div class="flip-picture-front">
-                  <img class="profile-picture" src="assets/profile-picture.png" alt="profilr_picture" width="800" height="800">
-                </div>
-                <div class="flip-picture-back">
-                  <img class="profile-picture" src="assets/dog.png" alt="back_img" width="800" height="800">
-                </div>
-              </div>
-            </div>
+{% render 'partials/head.liquid' %}
 
-            <h1 class="name">{{ person.name }}</h1>
-            <p class="job"><b><em>Barista</em></b></p>
-            <p class="study"><b><em>Frontend Developer Student in Amsterdam</em></b></p>
-            </header>
+<main>
+	<section class="kaartje">
+    	<h1>{{ person.name }}</h1>
+    	<img class="img-profile" src="assets/profile-picture.png" alt="Profile picture">
+		<p>Ik ben Viresh bekijk mijn vooruitgang door mijn projecten in de websites hieronder</p>
+		<ul class="ul-buttons">
+			<li><button>Visitekaartje sprint 1</button></li>
+			<li><button>Mediahuis</button></li>
+			<li><button>Accessdash</button></li>
+			<li><button>I Love Web</button></li>
+		</ul>
+	</section>
+	<section class="visitekaartje slide-info">
 
-          <section>
-            <dl>
-              <dt></dt>
-              <dt>Python
-                <span class="popover">Python<br>🏆🏆🏆<br>
-                  Ik heb al een wat ervaring met python.<br>
-                </span>
-              </dt>
-              <dt></dt>
+	</section>
+</main>
 
-              <dt>HTML
-                <span class="popover">HyperText Markup Language<br>🏆<br>
-                  Met HTML heb ik een beetje ervaring.<br> 
-                  Eerst probeerde ik zelf html en css te leren, maar het was moeilijk voor mij om consistent te blijven.<br>
-                  Ik wil wel meer leren over html en css en ik zie mezelf ook werken binnen dit vakgebied.<br>
-                  Daarom heb ik voor deze opleiding gekozen.
-                </span>
-              </dt>
+{% render 'partials/foot.liquid' %}
 
-              <dt class="skills">programming skills</dt>
-              
-              <dt>CSS
-                <span class="popover">Cascading Style Sheets<br>🏆<br>
-                  Met CSS heb ik ook een beetje ervaring.<br> 
-                  Ik dacht dat css makkelijk op te pakken was,
-                  maar na de eerste 2 dagen heb ik door dat css meer complex is dan ik dacht.<br>
-                </span>
-              </dt>
-
-              <dt></dt>
-              <dt>JavaScript
-                <span class="popover">JavaScript<br>💩<br>
-                  Met JavaScript heb ik geen ervaring.<br> 
-                  ik heb wel gezien hoe de querySelector en addEventListener werken.<br>
-                  Ik denk dat het me zal lukken om die aan te passen.
-                </span>
-              </dt>
-              <dt></dt>
-            </dl>
-          </section>
-        </div>
-        <div class="card_back">
-          <img class="back_img" src="assets/cool-dog.png" alt="ERROR" width="720" height="320">
-          <p>Dit is niet mijn hond</p>
-        </div>
-    </article>
-
-    <script src="scripts/script.js"></script> 
 
 {% render 'partials/foot.liquid' %}
