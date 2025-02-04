@@ -42,18 +42,17 @@ main {
 	/* visitekaartje button */
 	&:has([value="1"]:checked) {
 		.slide-info {
-			transform: translate(0, 3em);
+			transform: translate(0, 3.5em);
 			transition: 1s ease-in-out;
 		}
 
 		.kaartje {
-			transform: translate(0, -3em);
+			transform: translate(0, -3.5em);
 			transition: 1s ease-in-out;
 		}
 
 		.visite-info {
 			display: block;
-			opacity: 1;
 		}
 	}
 
@@ -71,7 +70,6 @@ main {
 
 		.visite-Mediahuis {
 			display: block;
-			opacity: 1;
 		}
 	}
 
@@ -89,7 +87,6 @@ main {
 
 		.visite-Accessdash {
 			display: block;
-			opacity: 1;
 		}
 	}
 
@@ -107,7 +104,6 @@ main {
 
 		.visite-ilw {
 			display: block;
-			opacity: 1;
 		}
 	}
 }
@@ -192,8 +188,10 @@ main {
 
 	.visite-info {
 		grid-area: bot;
-		align-content: end;
-		padding-bottom: 0.5em;
+		align-self: end;
+		margin-left: 3em;
+		margin-right: 3em;
+		margin-bottom: 1em;
 		display: none;
 	}
 
