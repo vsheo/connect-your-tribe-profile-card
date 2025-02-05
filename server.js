@@ -15,6 +15,11 @@ const personResponse = await fetch('https://fdnd.directus.app/items/person/' + p
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const personResponseJSON = await personResponse.json()
 
+let data = personResponseJSON.data
+let custom = (data.custom)
+let customParse = JSON.parse(custom);
+
+
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(personResponseJSON)
@@ -40,15 +45,15 @@ app.set('views', './views')
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('index.liquid', {person: personResponseJSON.data})
+   response.render('index.liquid', {person: data, custom: customParse})
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
 // Maak daar dan meer Routes voor aan, en koppel ze aan Views
-// app.get('/contact', function (request, response) {
-   // Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
-   // response.render('contact.liquid')
-// })
+app.get('/oefenen', function (request, response) {
+  //  Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
+  response.render('oefenen.liquid', {person: data, custom: customParse})
+})
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
