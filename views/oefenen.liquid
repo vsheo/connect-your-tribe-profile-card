@@ -1,0 +1,18 @@
+{% render 'partials/head.liquid' %}
+
+{% render 'partials/head.liquid' %}
+
+<main>
+    <details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
+
+    <h1>Data-Driven Web</h1>
+    <p>Ik ben dus {{ person.name }}</p>
+    <p>Het is vandaag {{ 'now' | date: '%d %B, %Y' }}</p>
+    <!-- json.parse -->
+    <p>Mijn haarkleur: {{ custom.haarkleur }}</p>
+</main>
+
+{% render 'partials/foot.liquid' %}
+
+
+{% render 'partials/foot.liquid' %}
