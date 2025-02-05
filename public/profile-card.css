@@ -10,6 +10,13 @@
 	font-weight: 600;
 }
 
+/* voor controle/testen */
+details {
+    position: fixed;
+    top: 2%;
+    left: 2em;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
