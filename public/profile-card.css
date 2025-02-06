@@ -33,8 +33,8 @@ main {
 	/* visitekaartje button */
 	&:has([value="1"]:checked) {
 		.slide-info {
-			transform: translate(0, 3.5em);
-			transition: 1s ease-in-out;
+			animation: slide-down 1.5s cubic-bezier(.84,1.37,.35,1.27);
+			transform: translate(0, 3.8em);
 		}
 
 		.kaartje {
@@ -50,8 +50,8 @@ main {
 	/* mediahuis button */
 	&:has([value="2"]:checked) {
 		.slide-info {
+			animation: slide-left 1.5s cubic-bezier(.84,1.37,.35,1.27);
 			transform: translate(-7em, 0);
-			transition: 1s ease-in-out;
 		}
 		
 		.kaartje {
@@ -67,8 +67,8 @@ main {
 	/* accessdash button */
 	&:has([value="3"]:checked) {
 		.slide-info {
+			animation: slide-right 1.5s cubic-bezier(.84,1.37,.35,1.27);
 			transform: translate(7em, 0);
-			transition: 1s ease-in-out;
 		}
 
 		.kaartje {
@@ -84,8 +84,8 @@ main {
 	/* ilw button */
 	&:has([value="4"]:checked) {
 		.slide-info {
+			animation: slide-up 1.5s cubic-bezier(.84,1.37,.35,1.27);
 			transform: translate(0, -3em);
-			transition: 1s ease-in-out;
 		}
 		
 		.kaartje {
@@ -211,42 +211,38 @@ main {
 }
 
 
-@keyframes slide-info-down {
+@keyframes slide-down {
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, -45em);
 	}
-
 	100% {
-		transform: translate(0, 8em);
+		transform: translate(0, 3.8em);
 	}
 }
 
-@keyframes slide-info-left {
+@keyframes slide-left {
 	0% {
-		transform: translate(0, 0);
+		transform: translate(50em, 0);
 	}
-
 	100% {
-		transform: translate(-8em, 0);
+		transform: translate(-7em, 0);
 	}
 }
 
-@keyframes slide-info-right {
+@keyframes slide-right {
 	0% {
-		transform: translate(0, 0);
+		transform: translate(-50em, 0);
 	}
-
 	100% {
-		transform: translate(8em, 0);
+		transform: translate(7em, 0);
 	}
 }
 
-@keyframes slide-info-up {
+@keyframes slide-up {
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, 45em);
 	}
-
 	100% {
-		transform: translate(0, -8em);
+		transform: translate(0, -3em);
 	}
 }
