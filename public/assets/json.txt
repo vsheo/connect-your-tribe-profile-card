@@ -3,6 +3,7 @@
     "projects": [
       {
         "id": "button-visite",
+        "value": "1",
         "style": "visite-info",
         "name": "Visitekaartje Sprint 1",
         "liveSite": "https://vsheo.github.io/your-tribe-profile-card/",
@@ -10,6 +11,7 @@
       },
       {
         "id": "button-Mediahuis",
+        "value": "2",
         "style": "visite-Mediahuis",
         "name": "Mediahuis",
         "liveSite": "https://vsheo.github.io/fix-the-flow-interactive-website/",
@@ -17,6 +19,7 @@
       },
       {
         "id": "button-Accessdash",
+        "value": "3",
         "style": "visite-Accessdash",
         "name": "AccessDash",
         "liveSite": "https://vsheo.github.io/the-startup-responsive-interactive-website/",
@@ -24,6 +27,7 @@
       },
       {
         "id": "button-ilw",
+        "value": "4",
         "style": "visite-ilw",
         "name": "I Love Web",
         "liveSite": "https://vsheo.github.io/i-love-web/",

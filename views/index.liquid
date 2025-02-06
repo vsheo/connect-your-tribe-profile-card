@@ -3,24 +3,24 @@
 {% render 'partials/head.liquid' %}
 
 <main>
-	<input type="checkbox" id="button-visite" name="active" value="1">
-	<input type="checkbox" id="button-Mediahuis" name="active" value="2">
-	<input type="checkbox" id="button-Accessdash" name="active" value="3">
-	<input type="checkbox" id="button-ilw" name="active" value="4">
+	{% for projectCheckbox in custom.projects limit: 4 %}
+	<input type="checkbox" id="{{ projectCheckbox.id }}" name="active" value="{{ projectCheckbox.value }}">
+	{%- endfor %}
 
 	<section class="kaartje">
     	<h1>{{ person.name }}</h1>
     	<img class="img-profile" src="assets/profile-picture.png" alt="Profile picture">
 		<p>Ik ben Viresh bekijk mijn vooruitgang door mijn projecten in de websites hieronder</p>
 		<ul class="ul-buttons">
-			{% for project in custom.projects limit: 4 %}
-			<li><label for="{{ project.id }}">{{ project.name }}</label></li>
+			{% for projectName in custom.projects limit: 4 %}
+			<li><label for="{{ projectName.id }}">{{ projectName.name }}</label></li>
 			{%- endfor %}
 		</ul>
 	</section>
+
 	<section class="visitekaartje slide-info">
-		{% for info in custom.projects limit: 4 %}
-		<p class="{{ info.style }}">{{ info.description }} <a href="{{ info.liveSite }}">{{ info.name }}</a></p>
+		{% for Projectinfo in custom.projects limit: 4 %}
+		<p class="{{ Projectinfo.style }}">{{ Projectinfo.description }} <a href="{{ Projectinfo.liveSite }}">{{ Projectinfo.name }}</a></p>
 		{%- endfor %}
 	</section>
 </main>
