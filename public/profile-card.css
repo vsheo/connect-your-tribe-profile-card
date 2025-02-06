@@ -26,24 +26,8 @@ main {
 
 	input {
 		position: absolute;
-		left: 5em;
-		top: 1em;
-		
-		&[value="1"] {
-			margin-left: 1em;
-		}
-
-		&[value="2"] {
-			margin-left: 2em;
-		}
-
-		&[value="3"] {
-			margin-left: 3em;
-		}
-
-		&[value="4"] {
-			margin-left: 4em;
-		}
+		left: -5em;
+		top: -1em;
 	}
 
 	/* visitekaartje button */

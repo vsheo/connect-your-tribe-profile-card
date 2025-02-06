@@ -31,3 +31,6 @@
       }
     ]
 }
+
+check:
+<details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
