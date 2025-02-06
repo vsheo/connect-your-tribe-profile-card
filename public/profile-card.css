@@ -18,6 +18,7 @@ details {
 }
 
 main {
+	background-color: #151320;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -34,16 +35,22 @@ main {
 	&:has([value="1"]:checked) {
 		.slide-info {
 			animation: slide-down 1.5s cubic-bezier(.84,1.37,.35,1.27);
-			transform: translate(0, 3.8em);
+			transform: translate(0, 4em);
 		}
 
 		.kaartje {
-			transform: translate(0, -3.5em);
+			transform: translate(0, -4em);
 			transition: 1s ease-in-out;
 		}
 
 		.visite-info {
-			display: block;
+			visibility: visible;
+
+			span {
+				opacity: 1;
+				transition: opacity 1.3s ease-in-out;
+				transition-delay: 1.6s;
+			}
 		}
 	}
 
@@ -60,7 +67,13 @@ main {
 		}
 
 		.visite-Mediahuis {
-			display: block;
+			visibility: visible;
+
+			span {
+				opacity: 1;
+				transition: opacity 1.3s ease-in-out;
+				transition-delay: 1.6s;
+			}
 		}
 	}
 
@@ -68,16 +81,22 @@ main {
 	&:has([value="3"]:checked) {
 		.slide-info {
 			animation: slide-right 1.5s cubic-bezier(.84,1.37,.35,1.27);
-			transform: translate(7em, 0);
+			transform: translate(7.5em, 0);
 		}
 
 		.kaartje {
-			transform: translate(-7em, 0);
+			transform: translate(-7.5em, 0);
 			transition: 1s ease-in-out;
 		}
 
 		.visite-Accessdash {
-			display: block;
+			visibility: visible;
+
+			span {		
+				opacity: 1;
+				transition: opacity 1.3s ease-in-out;
+				transition-delay: 1.6s;
+			}
 		}
 	}
 
@@ -94,7 +113,13 @@ main {
 		}
 
 		.visite-ilw {
-			display: block;
+			visibility: visible;
+
+			span {
+				opacity: 1;
+				transition: opacity 1.3s ease-in-out;
+				transition-delay: 1.6s;
+			}
 		}
 	}
 }
@@ -149,9 +174,19 @@ main {
 			list-style: none;
 			margin: 0.5em 0;
 
+			/* outline-width: 1px;
+			outline-offset: 0;
+			outline-color: rgba(0, 130, 206, 0.75);
+			outline-style: solid;
+			animation: animateOutline 4s ease infinite; */
+
 			label {
+				padding: 0.3em;
+				border-radius: 15px;
+
 				&:hover {
 					color: brown;
+					border: 1px solid brown;
 					transform: scale(1.2);
 					transform-origin: bottom left;
 					transition: ease-in-out;
@@ -177,36 +212,61 @@ main {
 	z-index: 10;
 	transition: 1s ease-in-out;
 
+	span {
+		position: absolute;
+		opacity: 0;
+		width: inherit;
+	}
+
 	.visite-info {
 		grid-area: bot;
-		align-self: end;
-		margin-left: 3em;
-		margin-right: 3em;
-		margin-bottom: 1em;
-		display: none;
+		visibility: hidden;
+
+		span {
+			align-items: end;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 28em;
+			bottom: 1em;
+		}
 	}
 
 	.visite-Mediahuis {
 		grid-area: left;
-		margin-left: 0.5em;
-		width: 13em;
-		display: none;
+		visibility: hidden;
+
+		span {
+			justify-self: center;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-left: 1em;
+			width: 13em;
+		}
 	}
 
 	.visite-Accessdash {
 		grid-area: right;
-		justify-self: end;
-		margin-right: 0.5em;
-		width: 13em;
-		display: none;
+		visibility: hidden;
+
+		span {
+			justify-self: end;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0.5em;
+			width: 13em;
+		}
 	}
 
 	.visite-ilw {
 		grid-area: top;
-		margin-top: 1em;
-		margin-left: 3em;
-		margin-right: 3em;
-		display: none;
+		visibility: hidden;
+
+		span {
+			margin-top: 1em;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 22em;
+		}
 	}
 }
 
@@ -216,7 +276,7 @@ main {
 		transform: translate(0, -45em);
 	}
 	100% {
-		transform: translate(0, 3.8em);
+		transform: translate(0, 4em);
 	}
 }
 
@@ -234,7 +294,7 @@ main {
 		transform: translate(-50em, 0);
 	}
 	100% {
-		transform: translate(7em, 0);
+		transform: translate(7.5em, 0);
 	}
 }
 

@@ -20,7 +20,7 @@
 
 	<section class="visitekaartje slide-info">
 		{% for Projectinfo in custom.projects limit: 4 %}
-		<p class="{{ Projectinfo.style }}">{{ Projectinfo.description }} <a href="{{ Projectinfo.liveSite }}">{{ Projectinfo.name }}</a></p>
+		<p class="{{ Projectinfo.style }}"><span>{{ Projectinfo.description }} <a href="{{ Projectinfo.liveSite }}">{{ Projectinfo.name }}</a></span></p>
 		{%- endfor %}
 	</section>
 </main>
