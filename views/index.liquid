@@ -21,23 +21,8 @@
 		</ul>
 	</section>
 	<section class="visitekaartje slide-info">
-		{% for project in custom.projects %}
-
-		{% if forloop.index == 1 %}
-		<p class="visite-info">{{ project.description }} <a href="{{ project.liveSite }}">visitekaartje sprint 1</a></p>
-		{%- endif -%}
-
-		{% if forloop.index == 2 %}
-		<p class="visite-Mediahuis">{{ project.description }} <a href="{{ project.liveSite }}">Mediahuis sprint 2-5</a></p>
-		{%- endif -%}
-
-		{% if forloop.index == 3 %}
-		<p class="visite-Accessdash">{{ project.description }} <a href="{{ project.liveSite }}">Accessdash sprint 6</a></p>
-		{%- endif -%}
-
-		{% if forloop.index == 4 %}
-		<p class="visite-ilw">{{ project.description }} <a href="{{ project.liveSite }}">I Love Web</a></p>
-		{%- endif -%}
+		{% for info in custom.projects limit: 4 %}
+		<p class="{{ info.style }}">{{ info.description }} <a href="{{ info.liveSite }}">{{ info.name }}</a></p>
 		{%- endfor %}
 	</section>
 </main>
