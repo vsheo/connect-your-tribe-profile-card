@@ -15,22 +15,8 @@
     	<img class="img-profile" src="assets/profile-picture.png" alt="Profile picture">
 		<p>Ik ben Viresh bekijk mijn vooruitgang door mijn projecten in de websites hieronder</p>
 		<ul class="ul-buttons">
-			{% for project in custom.projects %}
-			{% if forloop.index == 1 %}
-			<li><label for="button-visite">{{ project.name }}</label></li>
-			{%- endif -%}
-
-			{% if forloop.index == 2 %}
-			<li><label for="button-Mediahuis">{{ project.name }}</label></li>
-			{%- endif -%}
-
-			{% if forloop.index == 3 %}
-			<li><label for="button-Accessdash">{{ project.name }}</label></li>
-			{%- endif -%}
-
-			{% if forloop.index == 4 %}
-			<li><label for="button-ilw">{{ project.name }}</label></li>
-			{%- endif -%}
+			{% for project in custom.projects limit: 4 %}
+			<li><label for="{{ project.id }}">{{ project.name }}</label></li>
 			{%- endfor %}
 		</ul>
 	</section>
