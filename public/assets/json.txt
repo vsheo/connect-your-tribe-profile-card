@@ -1,0 +1,25 @@
+{
+  "haarkleur": "zwart",
+    "projects": [
+      {
+        "name": "Visitekaartje Sprint 1",
+        "liveSite": "https://vsheo.github.io/your-tribe-profile-card/",
+        "description": "In sprint 1 heb ik ook een visitekaartje ontworpen. Dit was de eerste website die ik voor deze opleiding heb gemaakt. Je kunt het visitekaartje hier bekijken: "
+      },
+      {
+        "name": "Mediahuis",
+        "liveSite": "https://vsheo.github.io/fix-the-flow-interactive-website/",
+        "description": "Bij het begin van sprint 2 kreeg ik de opdracht van een opdrachtgever om een overzichtspagina te maken van de sites van Veronica, Slam, 100%.nl en Sublime. Zo heb ik het aangepakt: "
+      },
+      {
+        "name": "AccessDash",
+        "liveSite": "https://vsheo.github.io/the-startup-responsive-interactive-website/",
+        "description": "In Sprint 6 kreeg ik de kans om alles wat ik in de voorgaande sprints heb geleerd te laten zien. De opdracht was om een website, genaamd AccessDah, te maken op basis van een Figma-prototype. Dit is het eindresultaat: "
+      },
+      {
+        "name": "I Love Web",
+        "liveSite": "https://vsheo.github.io/i-love-web/",
+        "description": "Bekijk mijn I Love Web, hier maak ik samenvattingen, leg ik code uit en houd ik mijn vooruitgang bij: "
+      }
+    ]
+}

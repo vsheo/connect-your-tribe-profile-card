@@ -38,19 +38,19 @@
 		{% for project in custom.projects %}
 
 		{% if forloop.index == 1 %}
-		<p class="visite-info">In sprint 1 heb ik ook een visitekaartje ontworpen. Dit was de eerste website die ik voor deze opleiding heb gemaakt. Je kunt het visitekaartje <a href="{{ project.liveSite }}">hier</a> bekijken.</p>
+		<p class="visite-info">{{ project.description }} <a href="{{ project.liveSite }}">visitekaartje sprint 1</a></p>
 		{%- endif -%}
 
 		{% if forloop.index == 2 %}
-		<p class="visite-Mediahuis">Bij het begin van sprint 2 kreeg ik de opdracht van een opdrachtgever om een overzichtspagina te maken van de sites van Veronica, Slam, 100%.nl en Sublime. <a href="{{ project.liveSite }}">Zo</a> heb ik het aangepakt.</p>
+		<p class="visite-Mediahuis">{{ project.description }} <a href="{{ project.liveSite }}">Mediahuis sprint 2-5</a></p>
 		{%- endif -%}
 
 		{% if forloop.index == 3 %}
-		<p class="visite-Accessdash">In Sprint 6 kreeg ik de kans om alles wat ik in de voorgaande sprints heb geleerd te laten zien. De opdracht was om een website, genaamd AccessDah, te maken op basis van een Figma-prototype. <a href="{{ project.liveSite }}">Dit</a> is het eindresultaat.</p>
+		<p class="visite-Accessdash">{{ project.description }} <a href="{{ project.liveSite }}">Accessdash sprint 6</a></p>
 		{%- endif -%}
 
 		{% if forloop.index == 4 %}
-		<p class="visite-ilw">Bekijk mijn I Love Web, <a href="{{ project.liveSite }}">hier</a> maak ik samenvattingen, leg ik code uit en houd ik mijn vooruitgang bij.</p>
+		<p class="visite-ilw">{{ project.description }} <a href="{{ project.liveSite }}">I Love Web</a></p>
 		{%- endif -%}
 		{%- endfor %}
 	</section>
