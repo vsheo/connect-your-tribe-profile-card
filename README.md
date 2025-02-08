@@ -16,6 +16,10 @@ De instructie vind je in: [INSTRUCTIONS](https://github.com/fdnd-task/connect-yo
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+De website is een klein kaartje met de projectnamen van semester 1. Wanneer er op een van de projecten wordt geklikt, verschijnt er een korte uitleg over mijn projecten van semester 1, met een link naar de websites.
+
+https://github.com/user-attachments/assets/01cbf83c-571a-401a-aaf2-8fab6693fa74
+
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 Qr code naar live site
@@ -31,7 +35,16 @@ HTML/ liquid
 De HTML bestaat uit één checkbox en twee secties. Elk van deze drie elementen heeft een for-loop die data uit Whois haalt en deze in de elementen genereert, zodat de HTML-code niet herhaald wordt.
 
 CSS
-In CSS maak ik gebruik van :has() & :checked om te kijken welke checkbox is aangevinkt. Afhankelijk van de condities wordt een animatie in CSS uitgevoerd.
+- In CSS maak ik gebruik van :has() & :checked om te kijken welke checkbox is aangevinkt. Afhankelijk van de condities wordt een animatie in CSS uitgevoerd.
+- Om aandacht te trekken naar de buttons, heb ik een lopende border toegevoegd in een hoogcontrastkleur, zodat het meteen opvalt.
+
+CSS animaties
+- Voor de animatie maak ik gebruik van Disney-principes:
+    - Anticipatie: de achtergrond komt van buiten het scherm en gaat iets verder voordat hij teruggaat naar zijn eindpositie. Het kaartje zelf beweegt ook in de omgekeerde richting van de achtergrond.
+    - Staging: nadat de eerste animatie (anticipatie) klaar is, verschijnt de tekst met een fade-in.
+
+https://github.com/user-attachments/assets/729bd1d5-6f9a-4643-a0e2-5410fd8eeac8
+
 
 JavaScript
 Je kunt meerdere checkboxes tegelijk aanklikken, maar ik wil dat er altijd maar één aan staat. Dit gedrag is vergelijkbaar met radio buttons, maar die kun je niet opnieuw aanklikken om ze uit te zetten.
@@ -43,6 +56,7 @@ Op deze manier kan ik een knop klikken om info op het scherm zetten en diezelfde
 ## Gebruik
 
 ## Bronnen
+[lopende border](https://www.letsbuildui.dev/articles/how-to-animate-borders-in-css/?utm_source=chatgpt.com)
 
 ## Licentie
 
