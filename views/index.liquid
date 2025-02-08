@@ -1,7 +1,5 @@
 {% render 'partials/head.liquid' %}
 
-{% render 'partials/head.liquid' %}
-
 <main>
 	{% for projectCheckbox in custom.projects limit: 4 %}
 	<input type="checkbox" id="{{ projectCheckbox.id }}" name="active" value="{{ projectCheckbox.value }}">
@@ -24,8 +22,5 @@
 		{%- endfor %}
 	</section>
 </main>
-
-{% render 'partials/foot.liquid' %}
-
 
 {% render 'partials/foot.liquid' %}
