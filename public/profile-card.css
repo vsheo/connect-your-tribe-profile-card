@@ -35,6 +35,7 @@ main {
 
 	/* visitekaartje button */
 	&:has([value="1"]:checked) {
+		/* achterste kaartje */
 		.slide-info {
 			animation: slide-down 1.5s cubic-bezier(.84,1.37,.35,1.27);
 			transform: translate(0, 4em);
@@ -44,6 +45,7 @@ main {
 			}
 		}
 
+		/* voorste kaartje */
 		.kaartje {
 			transform: translate(0, -4em);
 			transition: 1s ease-in-out;
@@ -53,6 +55,7 @@ main {
 			}
 		}
 
+		/* tekst */
 		.visite-info {
 			visibility: visible;
 
@@ -275,7 +278,7 @@ main {
 		opacity: 0;
 		width: inherit;
 	}
-
+	
 	.visite-info {
 		grid-area: bot;
 		visibility: hidden;
